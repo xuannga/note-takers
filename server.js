@@ -26,3 +26,7 @@ app.use('/', htmlRoutes);
 app.listen(PORT, () => {
     console.log(`API server is ready on port ${PORT}!`);
 });
+
+app.get("/", function(req, res) {
+    res.json(path.join(__dirname, "public/index.html"));
+});
