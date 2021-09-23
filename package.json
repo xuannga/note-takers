@@ -1,26 +1,27 @@
 {
-  "name": "note-takers",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xuannga/note-takers.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xuannga/note-takers/issues"
-  },
-  "homepage": "https://github.com/xuannga/note-takers#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "inquirer": "^8.1.2",
-    "uuid": "^8.3.2",
-    "uuidv4": "^6.2.11"
-  }
+    "name": "note-takers",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xuannga/note-takers.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xuannga/note-takers/issues"
+    },
+    "homepage": "https://github.com/xuannga/note-takers#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "inquirer": "^8.1.2",
+        "mysql": "^2.18.1",
+        "uuid": "^8.3.2",
+        "uuidv4": "^6.2.11"
+    }
 }
