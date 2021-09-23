@@ -24,11 +24,11 @@ var saveNote = function(note) {
     });
 };
 
-// A function for devaring a note from the db
-var devareNote = function(id) {
+// A function for deleting a note from the db
+var deleteNote = function(id) {
     return $.ajax({
         url: "api/notes/" + id,
-        method: "DEvarE"
+        method: "DELETE"
     })
 };
 
@@ -61,8 +61,8 @@ var handleNoteSave = function() {
     renderActiveNote();
 };
 
-// Devare the clicked note
-var handleNoteDevare = function(event) {
+// Delete the clicked note
+var handleNoteDelete = function(event) {
     // prevents the click listener for the list from being called when the button inside of it is clicked
     event.stopPropagation();
 
@@ -72,7 +72,7 @@ var handleNoteDevare = function(event) {
         activeNote = {};
     }
 
-    devareNote(note);
+    deleteNote(note);
     getAndRenderNotes();
     renderActiveNote();
 };
@@ -113,7 +113,7 @@ var renderNoteList = function(notes) {
 
         var $span = $("<span>").text(note.title);
         var $delBtn = $(
-            "<i class='fas fa-trash-alt float-right text-danger devare-note' data-id=" + i + ">"
+            "<i class='fas fa-trash-alt float-right text-danger delete-note' data-id=" + i + ">"
         );
 
         $li.append($span, $delBtn);
@@ -133,7 +133,7 @@ var getAndRenderNotes = function() {
 $saveNoteBtn.on("click", handleNoteSave);
 $noteList.on("click", ".list-group-item", handleNoteView);
 $newNoteBtn.on("click", handleNewNoteView);
-$noteList.on("click", ".devare-note", handleNoteDevare);
+$noteList.on("click", ".delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);
 
